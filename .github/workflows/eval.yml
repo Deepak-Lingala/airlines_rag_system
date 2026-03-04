@@ -1,0 +1,103 @@
+# ============================================================
+# RAG Evaluation Pipeline — GitHub Actions CI
+# ============================================================
+# Triggers on every PR to main branch.
+# Rebuilds the FAISS + BM25 index, then runs the RAGAS
+# evaluation against the golden eval set.
+# Build FAILS if faithfulness score drops below 0.80.
+# ============================================================
+
+name: RAG Evaluation Pipeline
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      # ── Setup ────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # ── Install Ollama (required for full evaluation) ───
+      - name: Install Ollama
+        run: |
+          curl -fsSL https://ollama.com/install.sh | sh
+          ollama serve &
+          sleep 5
+          ollama pull llama3.2:3b
+
+      # ── Build Index ─────────────────────────────────────
+      - name: Download policy data
+        run: python -m src.download_data
+
+      - name: Build FAISS + BM25 index
+        run: python -m src.build_index
+
+      # ── Dry Run (fast, no LLM) ─────────────────────────
+      - name: Retrieval smoke test
+        run: python evaluate.py --dry-run
+
+      # ── Full Evaluation ─────────────────────────────────
+      - name: Run RAGAS evaluation
+        run: python evaluate.py
+
+      # ── Report Results ──────────────────────────────────
+      - name: Upload evaluation results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: evaluation-results
+          path: evaluation_results.json
+
+      - name: Comment PR with results
+        if: github.event_name == 'pull_request' && always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            try {
+              const results = JSON.parse(
+                fs.readFileSync('evaluation_results.json', 'utf8')
+              );
+              const f = results.faithfulness?.toFixed(4) || 'N/A';
+              const cp = results.context_precision?.toFixed(4) || 'N/A';
+              const cr = results.context_recall?.toFixed(4) || 'N/A';
+              const passed = results.passed ? '✅ PASSED' : '❌ FAILED';
+
+              const body = `## 📊 RAG Evaluation Results
+
+              | Metric | Score |
+              |--------|-------|
+              | Faithfulness | ${f} |
+              | Context Precision | ${cp} |
+              | Context Recall | ${cr} |
+
+              **Threshold:** 0.80 | **Status:** ${passed}
+              `;
+
+              github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: body
+              });
+            } catch (e) {
+              console.log('Could not post results:', e.message);
+            }

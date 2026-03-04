@@ -1,0 +1,16 @@
+# Environments
+venv/
+env/
+.env
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Logs
+responses_log.jsonl
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db

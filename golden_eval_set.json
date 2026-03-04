@@ -1,0 +1,252 @@
+[
+    {
+        "question": "How many carry-on bags am I allowed on a Delta flight?",
+        "ground_truth": "You may bring one carry-on item onboard the aircraft, plus one personal item.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "What are the maximum dimensions for a carry-on bag on Delta?",
+        "ground_truth": "All carry-on items may not exceed 22\" x 14\" x 9\".",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Where must carry-on bags be stored during the flight?",
+        "ground_truth": "The FAA mandates that all carry-on items fit under a seat or in an enclosed storage compartment.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "What happens to my carry-on on a Delta Connection flight with 50 seats or less?",
+        "ground_truth": "Passengers traveling on Delta Connection flights with 50 seats or less are permitted to carry personal items onboard the aircraft. Due to limited overhead and under-seat space, larger items will be gate-checked and returned to the passenger upon deplaning.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Is the first checked bag free for SkyTeam Elite members on Delta?",
+        "ground_truth": "Your first checked bag fee is waived with Delta Medallion Status or as a SkyTeam Elite & Elite Plus Member.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Can SkyTeam Elite Plus members get additional checked bag fee waivers?",
+        "ground_truth": "You may qualify for additional waived bag fees and an increase in the weight of your checked bag depending on your fare type.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "What baggage rules apply if I have international and domestic segments on separate tickets?",
+        "ground_truth": "If an international passenger travels to the U.S. and continues their travel within the U.S. on a separate ticket, domestic rules apply.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Do international bag fee rules apply on connecting flights within the U.S.?",
+        "ground_truth": "If all flights are on the same itinerary, international fees and rules apply to passengers traveling internationally with a connection or stopover in the U.S.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Does Delta cover cameras packed in checked luggage?",
+        "ground_truth": "Delta cannot assume liability for jewelry, cash, camera equipment or other similar valuable items contained in checked or unchecked baggage.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "What valuables should I keep in my carry-on bag?",
+        "ground_truth": "Always carry medicine, money, valuable documents, keys, jewelry, cameras and other small fragile items in your carry-on luggage.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Should I lock my checked luggage on Delta?",
+        "ground_truth": "Never lock your luggage.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Does Delta require identification on checked bags?",
+        "ground_truth": "Delta requires outside personal identification on all checked baggage. They also recommend inside identification.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Is Delta liable for damage to carry-on items?",
+        "ground_truth": "Delta does not assume liability for unchecked items unless they are given to Delta personnel for storage during the flight or otherwise delivered into their custody for travel.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Where must a walking cane be stored on a Delta flight?",
+        "ground_truth": "Federal regulations require that a cane must be stowed for takeoff and landings in an approved storage compartment.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Can a flexible travel cane be stored under the seat on Delta?",
+        "ground_truth": "Flexible travel canes, such as those used by customers that are visually impaired, can be stored in the area under passenger seats, as long as the cane doesn't protrude into the aisle or otherwise disturb the crew or other passengers.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "What is Delta's 20 Minute Bag Guarantee?",
+        "ground_truth": "If the time elapsed between aircraft door open and delivery of the bag to the baggage claim carousel exceeds 20 minutes, passengers are eligible for the guarantee on domestic flights within the U.S. 50 states and Puerto Rico.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "What happens if only one of my checked bags is late under the bag guarantee?",
+        "ground_truth": "If any of your bags arrive late, you are eligible for the guarantee. However, there is a limit of one request per passenger per departing or returning itinerary, regardless of number of checked bags.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "How long do I have to submit a 20 Minute Bag Guarantee claim?",
+        "ground_truth": "Requests must be submitted at delta.com/bagsontime no later than three days after your flight's arrival.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "How long does it take for bag guarantee bonus miles to appear?",
+        "ground_truth": "Please allow up to two weeks after submitting your request for your bonus miles to appear in your account.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Does the 20 Minute Bag Guarantee apply on international flights?",
+        "ground_truth": "This offer is valid on domestic flights within the U.S. 50 states and Puerto Rico, marketed and operated by Delta Air Lines and Delta Connection carriers.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "What should I do if I lost something on a Delta plane?",
+        "ground_truth": "If you've left something on a Delta aircraft, at a Delta Sky Club, airport counter or gate, you can report your lost item through Delta's Lost and Found system.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "How do I check the status of a lost item claim with Delta?",
+        "ground_truth": "Visit Delta's Lost and Found FAQs page to check your claim status or get additional help.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Can Delta flight personnel limit carry-on baggage?",
+        "ground_truth": "Gate or flight personnel may need to further limit the amount of carry-on baggage for a particular flight, depending on the cabin storage capacity of the plane and the expected number of passengers.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "What is the baggage policy for active-duty U.S. military on Delta?",
+        "ground_truth": "Delta provides a special baggage allowance for active-duty U.S. military personnel when traveling on orders or for personal travel. Details are available on the baggage and travel fees page.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Where can I find Delta's most current checked baggage fees?",
+        "ground_truth": "Visit Delta's checked baggage fees page to find the most up-to-date information by travel region.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "What is the weight limit for carry-on bags on Delta?",
+        "ground_truth": "Carry-on bags must fit within the 22\" x 14\" x 9\" dimensions and fit under a seat or in an enclosed storage compartment per FAA regulations.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Can I bring a personal item in addition to my carry-on on Delta?",
+        "ground_truth": "You may bring one carry-on item onboard the aircraft, plus one personal item.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Are there special baggage rules for Delta Medallion members?",
+        "ground_truth": "Your first checked bag fee is waived with Delta Medallion Status. You may qualify for additional waived bag fees and an increase in the weight of your checked bag depending on your fare type.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "What if I don't find the answer to my baggage question on Delta's FAQ?",
+        "ground_truth": "If you don't see the answer to your question, feel free to contact Delta directly.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Does Delta's baggage liability cover jewelry in checked bags?",
+        "ground_truth": "Delta cannot assume liability for jewelry, cash, camera equipment or other similar valuable items contained in checked or unchecked baggage.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Is Delta responsible for items I bring on board myself?",
+        "ground_truth": "Delta does not assume liability for unchecked items unless they are given to Delta personnel for storage during the flight or otherwise delivered into their custody for travel.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "What flights are eligible for the 20 Minute Bag Guarantee?",
+        "ground_truth": "This offer is valid on domestic flights within the U.S. 50 states and Puerto Rico, marketed and operated by Delta Air Lines and Delta Connection carriers.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Does Delta charge extra bag fees for checked bags on international flights?",
+        "ground_truth": "International bag fees vary by travel region. Visit Delta's checked baggage fees page for the most up-to-date information.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "How does Delta track baggage arrival time for the bag guarantee?",
+        "ground_truth": "The time a bag takes to arrive at the baggage claim is measured by Delta's baggage tracking system, where available.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "What size personal item can I bring on Delta?",
+        "ground_truth": "Personal items must fit under the seat in front of you. All carry-on items including personal items must meet FAA regulations.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Can gate-checked bags on Delta Connection flights be picked up at the gate?",
+        "ground_truth": "On Delta Connection flights with 50 seats or less, larger items will be gate-checked. These bags will be returned to the passenger upon deplaning.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "What carry-on regulations does the FAA require on Delta flights?",
+        "ground_truth": "All carry-on items must meet Federal Aviation Administration (FAA) regulations and may not exceed 22\" x 14\" x 9\". The FAA mandates that all carry-on items fit under a seat or in an enclosed storage compartment.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Can multiple late bags from the same trip each get a bag guarantee claim?",
+        "ground_truth": "There is a limit of one request per passenger per departing or returning itinerary, regardless of number of checked bags.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "What is the compensation for a late bag under Delta's guarantee?",
+        "ground_truth": "Passengers eligible for the 20 Minute Bag Guarantee may receive bonus miles. Please allow up to two weeks after submitting your request for your bonus miles to appear in your account.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Does Delta cover cash lost in checked baggage?",
+        "ground_truth": "Delta cannot assume liability for jewelry, cash, camera equipment or other similar valuable items contained in checked or unchecked baggage.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Where can I report a lost item from a Delta Sky Club?",
+        "ground_truth": "If you've left something on a Delta aircraft, at a Delta Sky Club, airport counter or gate, you can report your lost item through Delta's online reporting system.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Is there a separate baggage policy for Delta Vacations packages?",
+        "ground_truth": "I cannot find specific information about Delta Vacations baggage policies in the available policy documents. Standard Delta baggage rules apply unless otherwise noted.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Can I bring a stroller on a Delta flight as carry-on?",
+        "ground_truth": "I cannot find specific stroller policy details in the available policy documents. Contact Delta directly at 1-800-221-1212 for the most current information.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "What is Delta's policy on oversized checked baggage?",
+        "ground_truth": "I cannot find specific oversized baggage details in the available policy documents. Visit Delta's baggage page or contact Delta for current oversize bag fees and policies.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Does Delta allow pets in carry-on bags?",
+        "ground_truth": "I cannot find specific pet carry-on policy details in the available policy documents. Contact Delta directly for their current pet travel policy.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "What is Delta's policy on sporting equipment as checked baggage?",
+        "ground_truth": "I cannot find specific sporting equipment baggage details in the available policy documents. Check Delta's baggage page for special item policies.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "How much does Delta charge for a second checked bag?",
+        "ground_truth": "Visit Delta's checked baggage fees page to find the most up-to-date fee information by travel region.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Can I bring a guitar as carry-on on Delta?",
+        "ground_truth": "I cannot find specific musical instrument carry-on policy details in the available policy documents. Contact Delta directly for their current policy on musical instruments.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "What should I do if my checked baggage is damaged by Delta?",
+        "ground_truth": "I cannot find specific damaged baggage claim procedures in the available FAQ documents. Report damaged baggage through Delta's website or contact them directly.",
+        "source": "Baggage FAQs"
+    },
+    {
+        "question": "Does Delta offer free checked bags for first class passengers?",
+        "ground_truth": "You may qualify for additional waived bag fees depending on your fare type. Visit Delta's baggage page for full details and baggage fees.",
+        "source": "Baggage FAQs"
+    }
+]

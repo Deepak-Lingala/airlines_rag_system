@@ -1,0 +1,9 @@
+{
+  "dry_run": {
+    "total_questions": 50,
+    "questions_with_results": 50,
+    "questions_with_relevant_results": 48,
+    "avg_results_per_question": 3.0,
+    "avg_top_score": 5.108085728287697
+  }
+}

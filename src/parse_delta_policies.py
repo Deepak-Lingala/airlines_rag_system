@@ -7,6 +7,8 @@ from bs4 import BeautifulSoup
 from src.config import DATA_DIR
 
 
+from src.download_data import POLICY_URLS
+
 def load_delta_policies():
     """Extract and chunk text from downloaded HTML policy files."""
     all_chunks = []
@@ -14,7 +16,13 @@ def load_delta_policies():
     
     if not html_files:
         print("Warning: No HTML files found. Using demo data.")
-        return ["[DEMO] Sample Delta policy text for testing."]
+        return [{
+            "text": "[DEMO] Sample Delta policy text for testing.",
+            "source": "Demo System",
+            "url": "https://www.delta.com",
+            "chunk_id": "demo_chunk_0",
+            "chunk_index": 0
+        }]
     
     print(f"Found {len(html_files)} HTML files")
     
@@ -41,17 +49,31 @@ def load_delta_policies():
         
         # Add source labels and limit chunk count
         source_name = path.stem.replace("delta_", "").replace("_", " ").title()
-        labeled_chunks = [
-            f"[Source: {source_name}]\n\n{chunk[:1200]}"
-            for chunk in chunks
-            if len(chunk) > 100
-        ]
+        url = POLICY_URLS.get(path.name, f"https://www.delta.com/search?q={source_name.replace(' ', '+')}")
+        
+        labeled_chunks = []
+        for index, chunk in enumerate(chunks):
+            if len(chunk) > 100:
+                chunk_id = f"{path.stem}_chunk_{index}"
+                labeled_chunks.append({
+                    "text": chunk[:1200],  # Cap chunk size
+                    "source": source_name,
+                    "url": url,
+                    "chunk_id": chunk_id,
+                    "chunk_index": index
+                })
         
         all_chunks.extend(labeled_chunks[:15])  # Max 15 chunks per file
-        print(f"  Extracted {len(labeled_chunks)} chunks")
+        print(f"  Extracted {len(labeled_chunks[:15])} chunks")
     
     print(f"Total chunks: {len(all_chunks)}")
-    return all_chunks if all_chunks else ["[DEMO] Sample Delta policy text for testing."]
+    return all_chunks if all_chunks else [{
+        "text": "[DEMO] Sample Delta policy text for testing.",
+        "source": "Demo System",
+        "url": "https://www.delta.com",
+        "chunk_id": "demo_chunk_0",
+        "chunk_index": 0
+    }]
 
 
 def _chunk_text(text, max_chunk_size=600, min_sentence_length=30, min_chunk_size=100):

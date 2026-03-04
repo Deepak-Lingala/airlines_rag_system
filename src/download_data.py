@@ -21,7 +21,10 @@ HEADERS = {
 POLICY_URLS = {
     "delta_domestic_contract.html": "https://www.delta.com/us/en/legal/contract-of-carriage-dgr",
     "delta_international_contract.html": "https://www.delta.com/us/en/legal/contract-of-carriage-igr",
-    "delta_baggage_faqs.html": "https://www.delta.com/us/en/baggage/additional-baggage-information/baggage-faqs"
+    "delta_baggage_faqs.html": "https://www.delta.com/us/en/baggage/additional-baggage-information/baggage-faqs",
+    "delta_cancellation_policy.html": "https://www.delta.com/us/en/change-cancel/cancel-flight",
+    "delta_change_flight.html": "https://www.delta.com/us/en/change-cancel/change-flight",
+    "delta_flight_help.html": "https://www.delta.com/us/en/need-help/support-topics/flight-changes-cancellations",
 }
 
 
